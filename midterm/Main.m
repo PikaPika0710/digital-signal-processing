@@ -3,14 +3,20 @@ close all;
 %lay tin hieu
 %data: bien do lay mau
 %fs: tan so lay mau
-[data1,fs1] = audioread('BT nhom/TinHieuHuanLuyen/phone_F1.wav');
-[data2,fs2] = audioread('BT nhom/TinHieuHuanLuyen/phone_M1.wav');
-[data3,fs3] = audioread('BT nhom/TinHieuHuanLuyen/studio_F1.wav');
-[data4,fs4] = audioread('BT nhom/TinHieuHuanLuyen/studio_M1.wav');
-[data5,fs5] = audioread('BT nhom/TinHieuKiemThu/phone_F2.wav');
-[data6,fs6] = audioread('BT nhom/TinHieuKiemThu/phone_M2.wav');
-[data7,fs7] = audioread('BT nhom/TinHieuKiemThu/studio_F2.wav');
-[data8,fs8] = audioread('BT nhom/TinHieuKiemThu/studio_M2.wav');
+% [data1,fs1] = audioread('BT nhom/TinHieuHuanLuyen/phone_F1.wav');
+% [data2,fs2] = audioread('BT nhom/TinHieuHuanLuyen/phone_M1.wav');
+% [data3,fs3] = audioread('BT nhom/TinHieuHuanLuyen/studio_F1.wav');
+% [data4,fs4] = audioread('BT nhom/TinHieuHuanLuyen/studio_M1.wav');
+% [data5,fs5] = audioread('BT nhom/TinHieuKiemThu/phone_F2.wav');
+% [data6,fs6] = audioread('BT nhom/TinHieuKiemThu/phone_M2.wav');
+% [data7,fs7] = audioread('BT nhom/TinHieuKiemThu/studio_F2.wav');
+% [data8,fs8] = audioread('BT nhom/TinHieuKiemThu/studio_M2.wav');
+
+[data5,fs5] = audioread('BT nhom/01MDA/a.wav');
+[data6,fs6] = audioread('BT nhom/01MDA/e.wav');
+[data7,fs7] = audioread('BT nhom/01MDA/i.wav');
+[data8,fs8] = audioread('BT nhom/01MDA/o.wav');
+%[data5,fs5] = audioread('BT nhom/01MDA/u.wav');
 
 %chuan hoa 
 %x = A./B divides each element of A by the corresponding element of B.
@@ -80,10 +86,10 @@ plot(t5, data5);title('DATA INPUT');ylabel('Amplitude'); xlabel('Time');
 subplot(2,1,2);
 plot(t5, data5);title('DATA OUTPUT');hold on
 plot(T5, ste_wave5, 'k', 'LineWidth', 1);ylabel('Amplitude'); xlabel('Time');hold on
-for i=1: length(phoneF2) %ke bien chuan
-    plot([1 1]*phoneF2(i), ylim, 'r', 'linewidth',2);
-end
-hold on;
+% for i=1: length(phoneF2) %ke bien chuan
+%     plot([1 1]*phoneF2(i), ylim, 'r', 'linewidth',2);
+% end
+% hold on;
 time1=Segmentation(ste5, threshold);
 for i=1:length(time1) %ke bien do thuat toan
     plot([1 1]*time1(i), ylim, 'g--', 'linewidth',2);
@@ -98,10 +104,10 @@ plot(t6, data6);title('DATA INPUT');ylabel('Amplitude'); xlabel('Time');
 subplot(2,1,2);
 plot(t6, data6);title('DATA OUTPUT');hold on
 plot(T6, ste_wave6,'k','LineWidth',1);ylabel('Amplitude'); xlabel('Time');hold on
-for i=1: length(phoneM2) %ke bien chuan
-    plot([1 1]*phoneM2(i), ylim, 'r','linewidth',2);
-end
-hold on;
+% for i=1: length(phoneM2) %ke bien chuan
+%     plot([1 1]*phoneM2(i), ylim, 'r','linewidth',2);
+% end
+% hold on;
 time2=Segmentation(ste6, threshold);
 for i=1:length(time2) 
     plot([1 1]*time2(i), ylim, 'g--', 'linewidth',2);
@@ -118,10 +124,10 @@ plot(t7, data7);title('DATA INPUT');ylabel('Amplitude'); xlabel('Time');
 subplot(2,1,2);
 plot(t7, data7);title('DATA OUTPUT');ylabel('Amplitude'); xlabel('Time');hold on
 plot(T7,ste_wave7,'k','LineWidth',1);hold on
-for i=1: length(studioF2) %ke bien chuan
-    plot([1 1]*studioF2(i), ylim, 'r', 'linewidth', 2);
-end
-hold on;
+% for i=1: length(studioF2) %ke bien chuan
+%     plot([1 1]*studioF2(i), ylim, 'r', 'linewidth', 2);
+% end
+% hold on;
 time3=Segmentation(ste7, threshold);
 for i=1:length(time3)
     plot([1 1]*time3(i), ylim, 'g--', 'linewidth', 2);
@@ -138,10 +144,10 @@ plot(t8, data8);title('DATA INPUT');ylabel('Amplitude'); xlabel('Time');
 subplot(2,1,2);
 plot(t8, data8);title('DATA OUTPUT');ylabel('Amplitude'); xlabel('Time');hold on
 plot(T8,ste_wave8,'k','LineWidth',1);hold on
-for i=1: length(studioM2) %ke bien chuan
-    plot([1 1]*studioM2(i), ylim, 'r', 'linewidth',2);
-end
-hold on;
+% for i=1: length(studioM2) %ke bien chuan
+%     plot([1 1]*studioM2(i), ylim, 'r', 'linewidth',2);
+% end
+% hold on;
 time4=Segmentation(ste8, threshold);
 for i=1:length(time4)
     plot([1 1]*time4(i), ylim, 'g--', 'linewidth',2);
