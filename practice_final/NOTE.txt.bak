@@ -2,5 +2,8 @@ Kết quả trung gian:
 +) khoảng lặng, nguyên âm
 +) vector đặc trưng của 5 nguyên âm (bảng số liệu, đồ thị) => vẽ đồ thị
 +) ma trận nhầm lẫn
-+)
++) 
 
+So sánh khi chưa sài Kmean K = 1, với khi sài Kmean tương ứng K = 2,3,4,5
+Độ  chênh lệnh độ chính xác, cải thiện được bao nhiêu?
+N và K thì cái nào ảnh hưởng hơn?
